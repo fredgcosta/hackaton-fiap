@@ -105,6 +105,10 @@ Além disso ele foi inspirado nos conceitos da [Tomato Architecture](https://www
 - `test/` - testes unitários e de integração
 - `pom.xml` - dependências do projeto
 
+## SwaggerUI
+http://localhost:8080/q/dev-ui/io.quarkus.quarkus-smallrye-openapi/swagger-ui
+
+![img.png](img.png)
 
 ## Guias relacionados
 
