@@ -1,0 +1,15 @@
+version: "3.5"
+services:
+  db:
+    image: postgres:15.4
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - /tmp/my-postgresql:/var/lib/postgresql
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: quarkus
+      POSTGRES_PASSWORD: quarkus
+      POSTGRES_DB: mentoria
+
+#    command: postgres -c 'max_connections=110' -c 'shared_buffers=512MB' -c 'fsync=off' -c 'max_prepared_transactions=300' -c 'effective_cache_size=1024MB' -c 'synchronous_commit=off' -c 'checkpoint_timeout=1d' -c 'max_wal_size=1GB' -c 'full_page_writes=false' -c 'work_mem=256MB'

@@ -1,0 +1,3 @@
+CREATE USER quarkus;
+CREATE DATABASE mentoria;
+GRANT ALL PRIVILEGES ON DATABASE mentoria TO quarkus;
